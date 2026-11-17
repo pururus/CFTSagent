@@ -18,7 +18,7 @@ class BM25Ranker(BaseRanker):
     def _tokens(text):
         return re.findall(r'\w+', text.casefold())
 
-    def fit(self, corpus, train_qrels):
+    def fit(self, corpus, train_qrels, *, train_queries=None):
         self.validate_input(corpus, train_qrels)
         if any(doc not in corpus for docs in train_qrels.values() for doc in docs):
             raise ValueError('Неизвестный документ')
@@ -64,7 +64,7 @@ class BM25Ranker(BaseRanker):
                 raise ValueError('Неверное состояние')
             candidate = BM25Ranker(data['k1'], data['b'])
             for doc, counts in data['documents']:
-                if type(doc) is not int or doc < 0 or not isinstance(counts, dict) or any(not isinstance(k, str) or type(v) is not int or v <= 0 for k, v in counts.items()):
+                if type(doc) is not int or not 0 <= doc < 2**63 or not isinstance(counts, dict) or any(not isinstance(k, str) or type(v) is not int or v <= 0 for k, v in counts.items()):
                     raise ValueError('Неверный индекс')
             candidate.documents = {doc: Counter(counts) for doc, counts in data['documents']}
             if len(candidate.documents) != len(data['documents']): raise ValueError('Повтор ID')

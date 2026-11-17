@@ -11,7 +11,7 @@ class PopularityRanker(BaseRanker):
             raise TypeError('Неизвестные параметры')
         self.scores = None
 
-    def fit(self, corpus, train_qrels):
+    def fit(self, corpus, train_qrels, *, train_queries=None):
         self.validate_input(corpus, train_qrels)
         scores = {key: 0 for key in corpus}
         for docs in train_qrels.values():
@@ -46,7 +46,7 @@ class PopularityRanker(BaseRanker):
         try:
             data = json.loads((Path(path) / 'model.json').read_text(encoding='utf-8'))
             pairs = data['scores']
-            if data['version'] != 2 or data['type'] != 'popularity' or not isinstance(pairs, list) or any(not isinstance(p, list) or len(p) != 2 or type(p[0]) is not int or p[0] < 0 or type(p[1]) is not int or p[1] < 0 for p in pairs):
+            if data['version'] != 2 or data['type'] != 'popularity' or not isinstance(pairs, list) or any(not isinstance(p, list) or len(p) != 2 or type(p[0]) is not int or not 0 <= p[0] < 2**63 or type(p[1]) is not int or p[1] < 0 for p in pairs):
                 raise ValueError('Неверное состояние')
             scores = dict(pairs)
             if len(scores) != len(pairs): raise ValueError('Повтор ID')

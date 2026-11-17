@@ -1,12 +1,14 @@
 """Общий контракт ранжировщиков API без привязки к формату датасета."""
 
 from abc import ABC, abstractmethod
+import math
 from os import PathLike
 from typing import Any, Mapping, Union
 
 
 Corpus = Mapping[int, Mapping[str, Any]]
 Qrels = Mapping[int, Mapping[int, float]]
+Queries = Mapping[int, str]
 ModelPath = Union[str, PathLike[str]]
 
 
@@ -23,14 +25,14 @@ class BaseRanker(ABC):
     def validate_input(corpus, qrels=None):
         """Проверить целые ID, текст и ссылки train-взаимодействий."""
         for api_id, doc in corpus.items():
-            if type(api_id) is not int or api_id < 0 or not isinstance(doc, Mapping) or not isinstance(doc.get('description'), str):
+            if type(api_id) is not int or not 0 <= api_id < 2**63 or not isinstance(doc, Mapping) or not isinstance(doc.get('description'), str):
                 raise ValueError('Ожидается неотрицательный целый API_id и строка description')
         if qrels is not None:
             for request_id, docs in qrels.items():
-                if type(request_id) is not int or request_id < 0 or not isinstance(docs, Mapping):
+                if type(request_id) is not int or not 0 <= request_id < 2**63 or not isinstance(docs, Mapping):
                     raise ValueError('Недопустимый Request_id или qrels')
                 for api_id, relevance in docs.items():
-                    if type(api_id) is not int or api_id not in corpus or isinstance(relevance, bool) or not isinstance(relevance, (int, float)) or not __import__('math').isfinite(relevance):
+                    if type(api_id) is not int or api_id not in corpus or isinstance(relevance, bool) or not isinstance(relevance, (int, float)) or not math.isfinite(relevance):
                         raise ValueError('Недопустимая связь qrels')
 
     @abstractmethod
@@ -39,14 +41,15 @@ class BaseRanker(ABC):
         raise NotImplementedError
 
     @abstractmethod
-    def fit(self, corpus: Corpus, train_qrels: Qrels) -> None:
+    def fit(self, corpus: Corpus, train_qrels: Qrels, *, train_queries: Queries = None) -> None:
         """Подготовить модель только на train API и train-связях.
 
         Popularity считает связи; BM25 строит индекс; zero-shot BGE
         кодирует документы без обучения весов. BM25 и BGE могут
         игнорировать train_qrels. Пустой корпус допустим. Неизвестный
         ID документа в qrels вызывает ValueError. Входы не изменяются.
-        Тексты train-запросов будущему KNN передаются отдельным контрактом.
+        CF использует train_queries с текстами только тренировочных запросов.
+        Бейзлайны могут игнорировать train_queries.
         """
         raise NotImplementedError
 

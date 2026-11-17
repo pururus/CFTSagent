@@ -29,10 +29,15 @@ class ZeroShotBGERanker(BaseRanker):
         vector = [float(x) for x in vector]
         if not vector or not all(math.isfinite(x) for x in vector):
             raise ValueError('Неверный вектор')
-        norm = math.sqrt(sum(x*x for x in vector))
-        return [x / norm for x in vector] if norm else vector
+        # Масштабирование до вычисления нормы исключает overflow/underflow.
+        scale = max(abs(x) for x in vector)
+        if not scale:
+            return vector
+        scaled = [x / scale for x in vector]
+        norm = math.sqrt(sum(x*x for x in scaled))
+        return [x / norm for x in scaled]
 
-    def fit(self, corpus, train_qrels):
+    def fit(self, corpus, train_qrels, *, train_queries=None):
         self.validate_input(corpus, train_qrels)
         if any(doc not in corpus for docs in train_qrels.values() for doc in docs):
             raise ValueError('Неизвестный документ')
@@ -100,7 +105,7 @@ class ZeroShotBGERanker(BaseRanker):
             candidate = ZeroShotBGERanker(data['model_path'], data['revision'], data['query_instruction'], data['max_length'], data['batch_size'], self.encoder, data.get('device', 'cuda'))
             if candidate.encoder is None and (not candidate.model_path or not Path(candidate.model_path).is_dir()):
                 raise FileNotFoundError('Локальные веса не найдены')
-            vectors = {key: self._normalize(vec) for key, vec in data['vectors'] if type(key) is int and key >= 0}
+            vectors = {key: self._normalize(vec) for key, vec in data['vectors'] if type(key) is int and 0 <= key < 2**63}
             if len(vectors) != len(data['vectors']) or len({len(v) for v in vectors.values()}) > 1:
                 raise ValueError('Несогласованные векторы')
         except (KeyError, TypeError, json.JSONDecodeError) as exc:
