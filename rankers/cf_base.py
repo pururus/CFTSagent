@@ -4,11 +4,14 @@ import json
 import math
 from collections.abc import Mapping
 from pathlib import Path
+from typing import Iterable
 
 import numpy as np
 from scipy import sparse
 
-from .base_ranker import BaseRanker
+from numpy.typing import ArrayLike, NDArray
+
+from .base_ranker import BaseRanker, Corpus, Encoder, ModelPath, Qrels, Queries
 from .bge import ZeroShotBGERanker
 from .cf_training import fit_als, fit_gradient
 
@@ -18,14 +21,14 @@ class CFBaseRanker(BaseRanker):
 
     variant = 'query'
 
-    def __init__(self, *, loss='mse', negative_sampling='random', factors=32,
-                 epochs=20, regularization=0.1, positive_weight=1.0,
-                 learning_rate=0.01, batch_size=128, n_neighbors=10,
-                 neighbor_weighting='cosine', negatives_per_positive=1,
-                 hard_pool_size=20, seed=42, device='cpu', encoder=None,
-                 model_path=None, revision=None, encoder_device=None,
-                 query_instruction='Represent this sentence for searching relevant passages: ',
-                 max_length=512, encoder_batch_size=32):
+    def __init__(self, *, loss: str = 'mse', negative_sampling: str = 'random', factors: int = 32,
+                 epochs: int = 20, regularization: float = 0.1, positive_weight: float = 1.0,
+                 learning_rate: float = 0.01, batch_size: int = 128, n_neighbors: int = 10,
+                 neighbor_weighting: str = 'cosine', negatives_per_positive: int = 1,
+                 hard_pool_size: int = 20, seed: int = 42, device: str = 'cpu', encoder: Encoder | None = None,
+                 model_path: ModelPath | None = None, revision: str | None = None, encoder_device: str | None = None,
+                 query_instruction: str = 'Represent this sentence for searching relevant passages: ',
+                 max_length: int = 512, encoder_batch_size: int = 32) -> None:
         if loss not in {'mse', 'bpr'} or negative_sampling not in {'random', 'semantic'}:
             raise ValueError('Неизвестная цель или стратегия семплинга')
         if neighbor_weighting not in {'cosine', 'uniform'}:
@@ -59,7 +62,7 @@ class CFBaseRanker(BaseRanker):
         self._fitted = False
 
     @staticmethod
-    def _normalized(matrix):
+    def _normalized(matrix: ArrayLike) -> NDArray[np.float32]:
         matrix = np.asarray(matrix)
         if matrix.dtype.kind not in 'fiu':
             raise ValueError('Ожидаются вещественные числовые эмбеддинги')
@@ -72,15 +75,15 @@ class CFBaseRanker(BaseRanker):
         norm = np.linalg.norm(scaled, axis=1, keepdims=True)
         return np.divide(scaled, norm, out=np.zeros_like(scaled), where=norm != 0).astype(np.float32)
 
-    def encode_queries(self, texts):
+    def encode_queries(self, texts: Iterable[str]) -> NDArray[np.float32]:
         """Кодировать запросы одним энкодером для обучения и инференса."""
         return self._encode(texts, query=True)
 
-    def encode_apis(self, descriptions):
+    def encode_apis(self, descriptions: Iterable[str]) -> NDArray[np.float32]:
         """Кодировать описания API для семантических негативов."""
         return self._encode(descriptions, query=False)
 
-    def _encode(self, texts, *, query):
+    def _encode(self, texts: Iterable[str], *, query: bool) -> NDArray[np.float32]:
         texts = list(texts)
         if not texts or any(not isinstance(text, str) for text in texts):
             raise ValueError('Нужен непустой список строк для кодирования')
@@ -95,7 +98,7 @@ class CFBaseRanker(BaseRanker):
             batches.append(encoded)
         return np.concatenate(batches)
 
-    def _cached_embeddings(self, ids, texts, cache, *, query):
+    def _cached_embeddings(self, ids: NDArray[np.int64], texts: Iterable[str], cache: Mapping[int, ArrayLike] | None, *, query: bool) -> NDArray[np.float32]:
         if cache is None:
             return self._encode(texts, query=query)
         if (not isinstance(cache, Mapping)
@@ -104,11 +107,11 @@ class CFBaseRanker(BaseRanker):
             raise ValueError('Кэш должен содержать ровно переданные train ID')
         return self._normalized([cache[identifier] for identifier in ids])
 
-    def _make_rows(self, interactions, embeddings):
+    def _make_rows(self, interactions: sparse.csr_matrix, embeddings: NDArray[np.floating]) -> tuple[sparse.csr_matrix, NDArray[np.floating], NDArray[np.int64]]:
         return interactions, embeddings, np.arange(interactions.shape[0], dtype=np.int64)
 
-    def fit(self, corpus, train_qrels, *, train_queries=None,
-            train_query_embeddings=None, train_api_embeddings=None):
+    def fit(self, corpus: Corpus, train_qrels: Qrels, *, train_queries: Queries | None = None,
+            train_query_embeddings: Mapping[int, ArrayLike] | None = None, train_api_embeddings: Mapping[int, ArrayLike] | None = None) -> None:
         """Обучить только train-данные, при необходимости используя кэши по ID."""
         self.validate_input(corpus, train_qrels)
         if not corpus or not isinstance(train_queries, Mapping) or not train_queries:
@@ -175,11 +178,11 @@ class CFBaseRanker(BaseRanker):
         self._fitted = True
         self.prepare_candidates(corpus)
 
-    def _require_fit(self):
+    def _require_fit(self) -> None:
         if not self._fitted:
             raise RuntimeError('Сначала выполните fit или load')
 
-    def prepare_candidates(self, corpus):
+    def prepare_candidates(self, corpus: Corpus) -> None:
         """Сопоставить полный каталог с обученными факторами без переобучения."""
         self._require_fit()
         self.validate_input(corpus)
@@ -189,7 +192,7 @@ class CFBaseRanker(BaseRanker):
         lookup = {int(identifier): i for i, identifier in enumerate(self.api_ids_)}
         self.candidate_indices_ = np.array([lookup.get(int(i), -1) for i in self.candidate_ids_])
 
-    def _query_factor(self, embedding):
+    def _query_factor(self, embedding: NDArray[np.floating]) -> NDArray[np.floating]:
         if self.variant == 'projected':
             return embedding @ self.left_factors_
         similarity = self.query_embeddings_ @ embedding
@@ -202,7 +205,7 @@ class CFBaseRanker(BaseRanker):
         # Повторные семейства автоматически получают суммарный вес соседей.
         return weights @ self.left_factors_[self.query_rows_[neighbors]]
 
-    def predict_from_embedding(self, embedding, top_k):
+    def predict_from_embedding(self, embedding: ArrayLike, top_k: int) -> list[int]:
         """Ранжировать с уже рассчитанным эмбеддингом того же энкодера."""
         self._require_fit()
         if type(top_k) is not int or top_k < 0:
@@ -220,7 +223,7 @@ class CFBaseRanker(BaseRanker):
         order = np.lexsort((self.candidate_ids_, -scores))[:top_k]
         return [int(i) for i in self.candidate_ids_[order]]
 
-    def predict(self, query, top_k):
+    def predict(self, query: str, top_k: int) -> list[int]:
         self._require_fit()
         if not isinstance(query, str):
             raise ValueError('Запрос должен быть строкой')
@@ -230,7 +233,7 @@ class CFBaseRanker(BaseRanker):
             return []
         return self.predict_from_embedding(self.encode_queries([query])[0], top_k)
 
-    def save(self, path):
+    def save(self, path: ModelPath) -> None:
         """Сохранить train-состояние в JSON и NPZ без pickle."""
         self._require_fit()
         path = Path(path)
@@ -247,7 +250,7 @@ class CFBaseRanker(BaseRanker):
         )
         (path / 'model.json').write_text(text, encoding='utf-8')
 
-    def load(self, path):
+    def load(self, path: ModelPath) -> None:
         """Проверить сохранённые массивы до замены состояния экземпляра."""
         path = Path(path)
         try:

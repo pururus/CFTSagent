@@ -1,9 +1,11 @@
 """CF на семействах train-запросов, выделенных по эмбеддингам."""
 
 import math
+from typing import Any
 
 import numpy as np
 from scipy import sparse
+from numpy.typing import NDArray
 
 from .cf_base import CFBaseRanker
 
@@ -13,8 +15,8 @@ class FamilyQueryKNNCFRanker(CFBaseRanker):
 
     variant = 'family'
 
-    def __init__(self, *, clustering='kmeans', n_families=32, eps=0.2,
-                 min_samples=5, aggregation='binary', count_transform='log1p', **kwargs):
+    def __init__(self, *, clustering: str = 'kmeans', n_families: int = 32, eps: float = 0.2,
+                 min_samples: int = 5, aggregation: str = 'binary', count_transform: str = 'log1p', **kwargs: Any) -> None:
         super().__init__(**kwargs)
         if clustering not in {'kmeans', 'minibatch_kmeans', 'dbscan'}:
             raise ValueError('Неизвестный метод кластеризации')
@@ -28,7 +30,7 @@ class FamilyQueryKNNCFRanker(CFBaseRanker):
                            min_samples=min_samples, aggregation=aggregation,
                            count_transform=count_transform)
 
-    def _make_rows(self, interactions, embeddings):
+    def _make_rows(self, interactions: sparse.csr_matrix, embeddings: NDArray[np.floating]) -> tuple[sparse.csr_matrix, NDArray[np.float32], NDArray[np.int64]]:
         from sklearn.cluster import DBSCAN, KMeans, MiniBatchKMeans
 
         cfg = self.config
