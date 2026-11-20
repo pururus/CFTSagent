@@ -4,7 +4,7 @@ import json
 import math
 from collections.abc import Mapping
 from pathlib import Path
-from typing import Iterable
+from typing import Callable, Iterable
 
 import numpy as np
 from scipy import sparse
@@ -111,7 +111,8 @@ class CFBaseRanker(BaseRanker):
         return interactions, embeddings, np.arange(interactions.shape[0], dtype=np.int64)
 
     def fit(self, corpus: Corpus, train_qrels: Qrels, *, train_queries: Queries | None = None,
-            train_query_embeddings: Mapping[int, ArrayLike] | None = None, train_api_embeddings: Mapping[int, ArrayLike] | None = None) -> None:
+            train_query_embeddings: Mapping[int, ArrayLike] | None = None, train_api_embeddings: Mapping[int, ArrayLike] | None = None,
+            progress_callback: Callable[[int, float], None] | None = None) -> None:
         """Обучить только train-данные, при необходимости используя кэши по ID."""
         self.validate_input(corpus, train_qrels)
         if not corpus or not isinstance(train_queries, Mapping) or not train_queries:
@@ -156,6 +157,7 @@ class CFBaseRanker(BaseRanker):
             left, items, history = fit_als(
                 targets, cfg['factors'], cfg['epochs'], cfg['regularization'],
                 cfg['positive_weight'], cfg['seed'],
+                progress_callback=progress_callback,
             )
         else:
             left, items, history = fit_gradient(
@@ -166,6 +168,7 @@ class CFBaseRanker(BaseRanker):
                 positive_weight=cfg['positive_weight'], learning_rate=cfg['learning_rate'],
                 batch_size=cfg['batch_size'], negatives_per_positive=cfg['negatives_per_positive'],
                 hard_pool_size=cfg['hard_pool_size'], seed=cfg['seed'], device=cfg['device'],
+                progress_callback=progress_callback,
             )
         if not np.isfinite(left).all() or not np.isfinite(items).all():
             raise ValueError('Неконечные факторы после обучения')
