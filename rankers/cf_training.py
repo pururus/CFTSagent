@@ -1,6 +1,8 @@
 """Оптимизация факторов CF и выбор негативов только из train API."""
 
 import numpy as np
+from numpy.typing import NDArray
+from scipy import sparse
 
 
 def mse_objective(targets, rows, items, regularization, positive_weight):
@@ -50,8 +52,9 @@ class NegativeSampler:
     произведение соответствует большему cosine-расстоянию.
     """
 
-    def __init__(self, targets, mode, rng, row_embeddings=None,
-                 api_embeddings=None, hard_pool_size=20, batch_size=128):
+    def __init__(self, targets: sparse.csr_matrix, mode: str, rng: np.random.Generator,
+                 row_embeddings: NDArray[np.floating] | None = None,
+                 api_embeddings: NDArray[np.floating] | None = None, hard_pool_size: int = 20, batch_size: int = 128) -> None:
         self.targets = targets.tocsr()
         self.mode = mode
         self.rng = rng
@@ -70,7 +73,7 @@ class NegativeSampler:
                     order = np.argsort(values[ids], kind='stable')
                     self.pools[row] = ids[order[:hard_pool_size]]
 
-    def sample(self, row):
+    def sample(self, row: int) -> int | None:
         """Вернуть индекс отрицательного train API или None, если их нет."""
         positives = self.positives[row]
         if len(positives) == self.n_items:

@@ -3,13 +3,22 @@
 from abc import ABC, abstractmethod
 import math
 from os import PathLike
-from typing import Any, Mapping, Union
+from typing import Any, Mapping, Protocol, Union
+
+from numpy.typing import ArrayLike
 
 
 Corpus = Mapping[int, Mapping[str, Any]]
 Qrels = Mapping[int, Mapping[int, float]]
 Queries = Mapping[int, str]
 ModelPath = Union[str, PathLike[str]]
+
+
+class Encoder(Protocol):
+    """Минимальный интерфейс локального или внедрённого энкодера."""
+
+    def encode(self, texts: list[str], /) -> ArrayLike:
+        ...
 
 
 class BaseRanker(ABC):
@@ -22,7 +31,7 @@ class BaseRanker(ABC):
     """
 
     @staticmethod
-    def validate_input(corpus, qrels=None):
+    def validate_input(corpus: Corpus, qrels: Qrels | None = None) -> None:
         """Проверить целые ID, текст и ссылки train-взаимодействий."""
         for api_id, doc in corpus.items():
             if type(api_id) is not int or not 0 <= api_id < 2**63 or not isinstance(doc, Mapping) or not isinstance(doc.get('description'), str):
@@ -41,7 +50,7 @@ class BaseRanker(ABC):
         raise NotImplementedError
 
     @abstractmethod
-    def fit(self, corpus: Corpus, train_qrels: Qrels, *, train_queries: Queries = None) -> None:
+    def fit(self, corpus: Corpus, train_qrels: Qrels, *, train_queries: Queries | None = None) -> None:
         """Подготовить модель только на train API и train-связях.
 
         Popularity считает связи; BM25 строит индекс; zero-shot BGE
