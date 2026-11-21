@@ -1,0 +1,901 @@
+model,metric,k,value
+Popularity,Recall,1,0.000121
+Popularity,Recall,2,0.000121
+Popularity,Recall,3,0.000283
+Popularity,Recall,4,0.000283
+Popularity,Recall,5,0.000343
+Popularity,Recall,6,0.000465
+Popularity,Recall,7,0.001313
+Popularity,Recall,8,0.001313
+Popularity,Recall,9,0.001313
+Popularity,Recall,10,0.001353
+Popularity,Recall,11,0.001485
+Popularity,Recall,12,0.001485
+Popularity,Recall,13,0.002131
+Popularity,Recall,14,0.002192
+Popularity,Recall,15,0.002454
+Popularity,Recall,16,0.002454
+Popularity,Recall,17,0.002858
+Popularity,Recall,18,0.003030
+Popularity,Recall,19,0.003030
+Popularity,Recall,20,0.003333
+Popularity,NDCG,1,0.000364
+Popularity,NDCG,2,0.000223
+Popularity,NDCG,3,0.000273
+Popularity,NDCG,4,0.000273
+Popularity,NDCG,5,0.000302
+Popularity,NDCG,6,0.000355
+Popularity,NDCG,7,0.000724
+Popularity,NDCG,8,0.000724
+Popularity,NDCG,9,0.000724
+Popularity,NDCG,10,0.000740
+Popularity,NDCG,11,0.000790
+Popularity,NDCG,12,0.000790
+Popularity,NDCG,13,0.001011
+Popularity,NDCG,14,0.001030
+Popularity,NDCG,15,0.001115
+Popularity,NDCG,16,0.001115
+Popularity,NDCG,17,0.001235
+Popularity,NDCG,18,0.001290
+Popularity,NDCG,19,0.001290
+Popularity,NDCG,20,0.001375
+Popularity,FullCoverage,1,0.000000
+Popularity,FullCoverage,2,0.000000
+Popularity,FullCoverage,3,0.000000
+Popularity,FullCoverage,4,0.000000
+Popularity,FullCoverage,5,0.000000
+Popularity,FullCoverage,6,0.000000
+Popularity,FullCoverage,7,0.000000
+Popularity,FullCoverage,8,0.000000
+Popularity,FullCoverage,9,0.000000
+Popularity,FullCoverage,10,0.000000
+Popularity,FullCoverage,11,0.000000
+Popularity,FullCoverage,12,0.000000
+Popularity,FullCoverage,13,0.000000
+Popularity,FullCoverage,14,0.000000
+Popularity,FullCoverage,15,0.000000
+Popularity,FullCoverage,16,0.000000
+Popularity,FullCoverage,17,0.000000
+Popularity,FullCoverage,18,0.000000
+Popularity,FullCoverage,19,0.000000
+Popularity,FullCoverage,20,0.000000
+BM25,Recall,1,0.156234
+BM25,Recall,2,0.223741
+BM25,Recall,3,0.264887
+BM25,Recall,4,0.290167
+BM25,Recall,5,0.312437
+BM25,Recall,6,0.329728
+BM25,Recall,7,0.344090
+BM25,Recall,8,0.355553
+BM25,Recall,9,0.366663
+BM25,Recall,10,0.376904
+BM25,Recall,11,0.385590
+BM25,Recall,12,0.394174
+BM25,Recall,13,0.402022
+BM25,Recall,14,0.408849
+BM25,Recall,15,0.415202
+BM25,Recall,16,0.421020
+BM25,Recall,17,0.426070
+BM25,Recall,18,0.431079
+BM25,Recall,19,0.436179
+BM25,Recall,20,0.441270
+BM25,NDCG,1,0.366865
+BM25,NDCG,2,0.288706
+BM25,NDCG,3,0.287645
+BM25,NDCG,4,0.297999
+BM25,NDCG,5,0.309378
+BM25,NDCG,6,0.317523
+BM25,NDCG,7,0.323830
+BM25,NDCG,8,0.328596
+BM25,NDCG,9,0.332978
+BM25,NDCG,10,0.336881
+BM25,NDCG,11,0.340072
+BM25,NDCG,12,0.343097
+BM25,NDCG,13,0.345813
+BM25,NDCG,14,0.348138
+BM25,NDCG,15,0.350221
+BM25,NDCG,16,0.352092
+BM25,NDCG,17,0.353699
+BM25,NDCG,18,0.355227
+BM25,NDCG,19,0.356792
+BM25,NDCG,20,0.358325
+BM25,FullCoverage,1,0.000000
+BM25,FullCoverage,2,0.033935
+BM25,FullCoverage,3,0.061689
+BM25,FullCoverage,4,0.079142
+BM25,FullCoverage,5,0.096837
+BM25,FullCoverage,6,0.108593
+BM25,FullCoverage,7,0.119501
+BM25,FullCoverage,8,0.128590
+BM25,FullCoverage,9,0.138407
+BM25,FullCoverage,10,0.147740
+BM25,FullCoverage,11,0.155254
+BM25,FullCoverage,12,0.163253
+BM25,FullCoverage,13,0.169676
+BM25,FullCoverage,14,0.175736
+BM25,FullCoverage,15,0.181433
+BM25,FullCoverage,16,0.186886
+BM25,FullCoverage,17,0.190886
+BM25,FullCoverage,18,0.194158
+BM25,FullCoverage,19,0.197915
+BM25,FullCoverage,20,0.202157
+BGE,Recall,1,0.161970
+BGE,Recall,2,0.227195
+BGE,Recall,3,0.265170
+BGE,Recall,4,0.293540
+BGE,Recall,5,0.315255
+BGE,Recall,6,0.334364
+BGE,Recall,7,0.351392
+BGE,Recall,8,0.365107
+BGE,Recall,9,0.379025
+BGE,Recall,10,0.389761
+BGE,Recall,11,0.398406
+BGE,Recall,12,0.408102
+BGE,Recall,13,0.417353
+BGE,Recall,14,0.424979
+BGE,Recall,15,0.433170
+BGE,Recall,16,0.440149
+BGE,Recall,17,0.446865
+BGE,Recall,18,0.453561
+BGE,Recall,19,0.460156
+BGE,Recall,20,0.465489
+BGE,NDCG,1,0.374500
+BGE,NDCG,2,0.292544
+BGE,NDCG,3,0.290446
+BGE,NDCG,4,0.302589
+BGE,NDCG,5,0.313565
+BGE,NDCG,6,0.322511
+BGE,NDCG,7,0.329936
+BGE,NDCG,8,0.335672
+BGE,NDCG,9,0.341096
+BGE,NDCG,10,0.345178
+BGE,NDCG,11,0.348362
+BGE,NDCG,12,0.351812
+BGE,NDCG,13,0.355051
+BGE,NDCG,14,0.357621
+BGE,NDCG,15,0.360333
+BGE,NDCG,16,0.362583
+BGE,NDCG,17,0.364727
+BGE,NDCG,18,0.366814
+BGE,NDCG,19,0.368810
+BGE,NDCG,20,0.370415
+BGE,FullCoverage,1,0.000000
+BGE,FullCoverage,2,0.020846
+BGE,FullCoverage,3,0.038662
+BGE,FullCoverage,4,0.055751
+BGE,FullCoverage,5,0.071749
+BGE,FullCoverage,6,0.084475
+BGE,FullCoverage,7,0.097079
+BGE,FullCoverage,8,0.105199
+BGE,FullCoverage,9,0.117198
+BGE,FullCoverage,10,0.126045
+BGE,FullCoverage,11,0.131742
+BGE,FullCoverage,12,0.141437
+BGE,FullCoverage,13,0.149436
+BGE,FullCoverage,14,0.155860
+BGE,FullCoverage,15,0.163132
+BGE,FullCoverage,16,0.169192
+BGE,FullCoverage,17,0.175373
+BGE,FullCoverage,18,0.181069
+BGE,FullCoverage,19,0.187371
+BGE,FullCoverage,20,0.191977
+Query-KNN CF | MSE,Recall,1,0.000566
+Query-KNN CF | MSE,Recall,2,0.001828
+Query-KNN CF | MSE,Recall,3,0.002575
+Query-KNN CF | MSE,Recall,4,0.002899
+Query-KNN CF | MSE,Recall,5,0.003434
+Query-KNN CF | MSE,Recall,6,0.003979
+Query-KNN CF | MSE,Recall,7,0.004424
+Query-KNN CF | MSE,Recall,8,0.005191
+Query-KNN CF | MSE,Recall,9,0.005585
+Query-KNN CF | MSE,Recall,10,0.006333
+Query-KNN CF | MSE,Recall,11,0.007312
+Query-KNN CF | MSE,Recall,12,0.008161
+Query-KNN CF | MSE,Recall,13,0.009191
+Query-KNN CF | MSE,Recall,14,0.009867
+Query-KNN CF | MSE,Recall,15,0.010342
+Query-KNN CF | MSE,Recall,16,0.010847
+Query-KNN CF | MSE,Recall,17,0.011281
+Query-KNN CF | MSE,Recall,18,0.011908
+Query-KNN CF | MSE,Recall,19,0.012110
+Query-KNN CF | MSE,Recall,20,0.012594
+Query-KNN CF | MSE,NDCG,1,0.001333
+Query-KNN CF | MSE,NDCG,2,0.002036
+Query-KNN CF | MSE,NDCG,3,0.002318
+Query-KNN CF | MSE,NDCG,4,0.002459
+Query-KNN CF | MSE,NDCG,5,0.002739
+Query-KNN CF | MSE,NDCG,6,0.002992
+Query-KNN CF | MSE,NDCG,7,0.003186
+Query-KNN CF | MSE,NDCG,8,0.003512
+Query-KNN CF | MSE,NDCG,9,0.003680
+Query-KNN CF | MSE,NDCG,10,0.003961
+Query-KNN CF | MSE,NDCG,11,0.004325
+Query-KNN CF | MSE,NDCG,12,0.004623
+Query-KNN CF | MSE,NDCG,13,0.004983
+Query-KNN CF | MSE,NDCG,14,0.005206
+Query-KNN CF | MSE,NDCG,15,0.005358
+Query-KNN CF | MSE,NDCG,16,0.005523
+Query-KNN CF | MSE,NDCG,17,0.005665
+Query-KNN CF | MSE,NDCG,18,0.005859
+Query-KNN CF | MSE,NDCG,19,0.005925
+Query-KNN CF | MSE,NDCG,20,0.006070
+Query-KNN CF | MSE,FullCoverage,1,0.000000
+Query-KNN CF | MSE,FullCoverage,2,0.000000
+Query-KNN CF | MSE,FullCoverage,3,0.000000
+Query-KNN CF | MSE,FullCoverage,4,0.000000
+Query-KNN CF | MSE,FullCoverage,5,0.000121
+Query-KNN CF | MSE,FullCoverage,6,0.000242
+Query-KNN CF | MSE,FullCoverage,7,0.000364
+Query-KNN CF | MSE,FullCoverage,8,0.000364
+Query-KNN CF | MSE,FullCoverage,9,0.000364
+Query-KNN CF | MSE,FullCoverage,10,0.000364
+Query-KNN CF | MSE,FullCoverage,11,0.000364
+Query-KNN CF | MSE,FullCoverage,12,0.000364
+Query-KNN CF | MSE,FullCoverage,13,0.000364
+Query-KNN CF | MSE,FullCoverage,14,0.000727
+Query-KNN CF | MSE,FullCoverage,15,0.000727
+Query-KNN CF | MSE,FullCoverage,16,0.000727
+Query-KNN CF | MSE,FullCoverage,17,0.000727
+Query-KNN CF | MSE,FullCoverage,18,0.000727
+Query-KNN CF | MSE,FullCoverage,19,0.000727
+Query-KNN CF | MSE,FullCoverage,20,0.000727
+Query-KNN CF | BPR/random,Recall,1,0.002747
+Query-KNN CF | BPR/random,Recall,2,0.005292
+Query-KNN CF | BPR/random,Recall,3,0.007959
+Query-KNN CF | BPR/random,Recall,4,0.009585
+Query-KNN CF | BPR/random,Recall,5,0.010928
+Query-KNN CF | BPR/random,Recall,6,0.011968
+Query-KNN CF | BPR/random,Recall,7,0.013120
+Query-KNN CF | BPR/random,Recall,8,0.013776
+Query-KNN CF | BPR/random,Recall,9,0.014534
+Query-KNN CF | BPR/random,Recall,10,0.015251
+Query-KNN CF | BPR/random,Recall,11,0.015847
+Query-KNN CF | BPR/random,Recall,12,0.016503
+Query-KNN CF | BPR/random,Recall,13,0.016968
+Query-KNN CF | BPR/random,Recall,14,0.017351
+Query-KNN CF | BPR/random,Recall,15,0.017755
+Query-KNN CF | BPR/random,Recall,16,0.018260
+Query-KNN CF | BPR/random,Recall,17,0.018866
+Query-KNN CF | BPR/random,Recall,18,0.019089
+Query-KNN CF | BPR/random,Recall,19,0.019422
+Query-KNN CF | BPR/random,Recall,20,0.019765
+Query-KNN CF | BPR/random,NDCG,1,0.006787
+Query-KNN CF | BPR/random,NDCG,2,0.006646
+Query-KNN CF | BPR/random,NDCG,3,0.007579
+Query-KNN CF | BPR/random,NDCG,4,0.008381
+Query-KNN CF | BPR/random,NDCG,5,0.009058
+Query-KNN CF | BPR/random,NDCG,6,0.009549
+Query-KNN CF | BPR/random,NDCG,7,0.010041
+Query-KNN CF | BPR/random,NDCG,8,0.010316
+Query-KNN CF | BPR/random,NDCG,9,0.010617
+Query-KNN CF | BPR/random,NDCG,10,0.010879
+Query-KNN CF | BPR/random,NDCG,11,0.011108
+Query-KNN CF | BPR/random,NDCG,12,0.011348
+Query-KNN CF | BPR/random,NDCG,13,0.011511
+Query-KNN CF | BPR/random,NDCG,14,0.011640
+Query-KNN CF | BPR/random,NDCG,15,0.011776
+Query-KNN CF | BPR/random,NDCG,16,0.011937
+Query-KNN CF | BPR/random,NDCG,17,0.012125
+Query-KNN CF | BPR/random,NDCG,18,0.012200
+Query-KNN CF | BPR/random,NDCG,19,0.012302
+Query-KNN CF | BPR/random,NDCG,20,0.012405
+Query-KNN CF | BPR/random,FullCoverage,1,0.000000
+Query-KNN CF | BPR/random,FullCoverage,2,0.000000
+Query-KNN CF | BPR/random,FullCoverage,3,0.000242
+Query-KNN CF | BPR/random,FullCoverage,4,0.000242
+Query-KNN CF | BPR/random,FullCoverage,5,0.000364
+Query-KNN CF | BPR/random,FullCoverage,6,0.000485
+Query-KNN CF | BPR/random,FullCoverage,7,0.000606
+Query-KNN CF | BPR/random,FullCoverage,8,0.000606
+Query-KNN CF | BPR/random,FullCoverage,9,0.000727
+Query-KNN CF | BPR/random,FullCoverage,10,0.000848
+Query-KNN CF | BPR/random,FullCoverage,11,0.000848
+Query-KNN CF | BPR/random,FullCoverage,12,0.000970
+Query-KNN CF | BPR/random,FullCoverage,13,0.000970
+Query-KNN CF | BPR/random,FullCoverage,14,0.000970
+Query-KNN CF | BPR/random,FullCoverage,15,0.000970
+Query-KNN CF | BPR/random,FullCoverage,16,0.001091
+Query-KNN CF | BPR/random,FullCoverage,17,0.001091
+Query-KNN CF | BPR/random,FullCoverage,18,0.001091
+Query-KNN CF | BPR/random,FullCoverage,19,0.001212
+Query-KNN CF | BPR/random,FullCoverage,20,0.001212
+Query-KNN CF | BPR/semantic,Recall,1,0.001616
+Query-KNN CF | BPR/semantic,Recall,2,0.003303
+Query-KNN CF | BPR/semantic,Recall,3,0.004505
+Query-KNN CF | BPR/semantic,Recall,4,0.005373
+Query-KNN CF | BPR/semantic,Recall,5,0.006444
+Query-KNN CF | BPR/semantic,Recall,6,0.007676
+Query-KNN CF | BPR/semantic,Recall,7,0.008797
+Query-KNN CF | BPR/semantic,Recall,8,0.009676
+Query-KNN CF | BPR/semantic,Recall,9,0.010473
+Query-KNN CF | BPR/semantic,Recall,10,0.011110
+Query-KNN CF | BPR/semantic,Recall,11,0.011766
+Query-KNN CF | BPR/semantic,Recall,12,0.012574
+Query-KNN CF | BPR/semantic,Recall,13,0.013211
+Query-KNN CF | BPR/semantic,Recall,14,0.014079
+Query-KNN CF | BPR/semantic,Recall,15,0.014796
+Query-KNN CF | BPR/semantic,Recall,16,0.015382
+Query-KNN CF | BPR/semantic,Recall,17,0.016089
+Query-KNN CF | BPR/semantic,Recall,18,0.016422
+Query-KNN CF | BPR/semantic,Recall,19,0.017038
+Query-KNN CF | BPR/semantic,Recall,20,0.017351
+Query-KNN CF | BPR/semantic,NDCG,1,0.004000
+Query-KNN CF | BPR/semantic,NDCG,2,0.004000
+Query-KNN CF | BPR/semantic,NDCG,3,0.004362
+Query-KNN CF | BPR/semantic,NDCG,4,0.004777
+Query-KNN CF | BPR/semantic,NDCG,5,0.005329
+Query-KNN CF | BPR/semantic,NDCG,6,0.005902
+Query-KNN CF | BPR/semantic,NDCG,7,0.006385
+Query-KNN CF | BPR/semantic,NDCG,8,0.006742
+Query-KNN CF | BPR/semantic,NDCG,9,0.007062
+Query-KNN CF | BPR/semantic,NDCG,10,0.007297
+Query-KNN CF | BPR/semantic,NDCG,11,0.007546
+Query-KNN CF | BPR/semantic,NDCG,12,0.007835
+Query-KNN CF | BPR/semantic,NDCG,13,0.008065
+Query-KNN CF | BPR/semantic,NDCG,14,0.008358
+Query-KNN CF | BPR/semantic,NDCG,15,0.008594
+Query-KNN CF | BPR/semantic,NDCG,16,0.008786
+Query-KNN CF | BPR/semantic,NDCG,17,0.009001
+Query-KNN CF | BPR/semantic,NDCG,18,0.009105
+Query-KNN CF | BPR/semantic,NDCG,19,0.009293
+Query-KNN CF | BPR/semantic,NDCG,20,0.009389
+Query-KNN CF | BPR/semantic,FullCoverage,1,0.000000
+Query-KNN CF | BPR/semantic,FullCoverage,2,0.000000
+Query-KNN CF | BPR/semantic,FullCoverage,3,0.000000
+Query-KNN CF | BPR/semantic,FullCoverage,4,0.000242
+Query-KNN CF | BPR/semantic,FullCoverage,5,0.000364
+Query-KNN CF | BPR/semantic,FullCoverage,6,0.000485
+Query-KNN CF | BPR/semantic,FullCoverage,7,0.000606
+Query-KNN CF | BPR/semantic,FullCoverage,8,0.000727
+Query-KNN CF | BPR/semantic,FullCoverage,9,0.000727
+Query-KNN CF | BPR/semantic,FullCoverage,10,0.000727
+Query-KNN CF | BPR/semantic,FullCoverage,11,0.000727
+Query-KNN CF | BPR/semantic,FullCoverage,12,0.000727
+Query-KNN CF | BPR/semantic,FullCoverage,13,0.000727
+Query-KNN CF | BPR/semantic,FullCoverage,14,0.000727
+Query-KNN CF | BPR/semantic,FullCoverage,15,0.000848
+Query-KNN CF | BPR/semantic,FullCoverage,16,0.000970
+Query-KNN CF | BPR/semantic,FullCoverage,17,0.000970
+Query-KNN CF | BPR/semantic,FullCoverage,18,0.001091
+Query-KNN CF | BPR/semantic,FullCoverage,19,0.001091
+Query-KNN CF | BPR/semantic,FullCoverage,20,0.001212
+Family CF | MSE,Recall,1,0.001040
+Family CF | MSE,Recall,2,0.001949
+Family CF | MSE,Recall,3,0.002474
+Family CF | MSE,Recall,4,0.002868
+Family CF | MSE,Recall,5,0.003404
+Family CF | MSE,Recall,6,0.004353
+Family CF | MSE,Recall,7,0.004989
+Family CF | MSE,Recall,8,0.005555
+Family CF | MSE,Recall,9,0.006090
+Family CF | MSE,Recall,10,0.006827
+Family CF | MSE,Recall,11,0.007454
+Family CF | MSE,Recall,12,0.008221
+Family CF | MSE,Recall,13,0.008787
+Family CF | MSE,Recall,14,0.009221
+Family CF | MSE,Recall,15,0.009726
+Family CF | MSE,Recall,16,0.010494
+Family CF | MSE,Recall,17,0.010978
+Family CF | MSE,Recall,18,0.011514
+Family CF | MSE,Recall,19,0.011978
+Family CF | MSE,Recall,20,0.012443
+Family CF | MSE,NDCG,1,0.002909
+Family CF | MSE,NDCG,2,0.002627
+Family CF | MSE,NDCG,3,0.002573
+Family CF | MSE,NDCG,4,0.002735
+Family CF | MSE,NDCG,5,0.003015
+Family CF | MSE,NDCG,6,0.003440
+Family CF | MSE,NDCG,7,0.003718
+Family CF | MSE,NDCG,8,0.003948
+Family CF | MSE,NDCG,9,0.004159
+Family CF | MSE,NDCG,10,0.004450
+Family CF | MSE,NDCG,11,0.004685
+Family CF | MSE,NDCG,12,0.004953
+Family CF | MSE,NDCG,13,0.005155
+Family CF | MSE,NDCG,14,0.005302
+Family CF | MSE,NDCG,15,0.005481
+Family CF | MSE,NDCG,16,0.005734
+Family CF | MSE,NDCG,17,0.005891
+Family CF | MSE,NDCG,18,0.006057
+Family CF | MSE,NDCG,19,0.006195
+Family CF | MSE,NDCG,20,0.006331
+Family CF | MSE,FullCoverage,1,0.000000
+Family CF | MSE,FullCoverage,2,0.000000
+Family CF | MSE,FullCoverage,3,0.000000
+Family CF | MSE,FullCoverage,4,0.000000
+Family CF | MSE,FullCoverage,5,0.000000
+Family CF | MSE,FullCoverage,6,0.000000
+Family CF | MSE,FullCoverage,7,0.000000
+Family CF | MSE,FullCoverage,8,0.000000
+Family CF | MSE,FullCoverage,9,0.000000
+Family CF | MSE,FullCoverage,10,0.000000
+Family CF | MSE,FullCoverage,11,0.000000
+Family CF | MSE,FullCoverage,12,0.000242
+Family CF | MSE,FullCoverage,13,0.000242
+Family CF | MSE,FullCoverage,14,0.000242
+Family CF | MSE,FullCoverage,15,0.000242
+Family CF | MSE,FullCoverage,16,0.000364
+Family CF | MSE,FullCoverage,17,0.000364
+Family CF | MSE,FullCoverage,18,0.000485
+Family CF | MSE,FullCoverage,19,0.000485
+Family CF | MSE,FullCoverage,20,0.000606
+Family CF | BPR/random,Recall,1,0.000677
+Family CF | BPR/random,Recall,2,0.001262
+Family CF | BPR/random,Recall,3,0.001818
+Family CF | BPR/random,Recall,4,0.002454
+Family CF | BPR/random,Recall,5,0.002858
+Family CF | BPR/random,Recall,6,0.003323
+Family CF | BPR/random,Recall,7,0.003798
+Family CF | BPR/random,Recall,8,0.004191
+Family CF | BPR/random,Recall,9,0.004323
+Family CF | BPR/random,Recall,10,0.005262
+Family CF | BPR/random,Recall,11,0.005585
+Family CF | BPR/random,Recall,12,0.005898
+Family CF | BPR/random,Recall,13,0.006282
+Family CF | BPR/random,Recall,14,0.006625
+Family CF | BPR/random,Recall,15,0.007029
+Family CF | BPR/random,Recall,16,0.007373
+Family CF | BPR/random,Recall,17,0.007928
+Family CF | BPR/random,Recall,18,0.008191
+Family CF | BPR/random,Recall,19,0.008363
+Family CF | BPR/random,Recall,20,0.008464
+Family CF | BPR/random,NDCG,1,0.001818
+Family CF | BPR/random,NDCG,2,0.001677
+Family CF | BPR/random,NDCG,3,0.001819
+Family CF | BPR/random,NDCG,4,0.002114
+Family CF | BPR/random,NDCG,5,0.002317
+Family CF | BPR/random,NDCG,6,0.002538
+Family CF | BPR/random,NDCG,7,0.002747
+Family CF | BPR/random,NDCG,8,0.002923
+Family CF | BPR/random,NDCG,9,0.002977
+Family CF | BPR/random,NDCG,10,0.003325
+Family CF | BPR/random,NDCG,11,0.003439
+Family CF | BPR/random,NDCG,12,0.003554
+Family CF | BPR/random,NDCG,13,0.003692
+Family CF | BPR/random,NDCG,14,0.003802
+Family CF | BPR/random,NDCG,15,0.003943
+Family CF | BPR/random,NDCG,16,0.004054
+Family CF | BPR/random,NDCG,17,0.004221
+Family CF | BPR/random,NDCG,18,0.004300
+Family CF | BPR/random,NDCG,19,0.004355
+Family CF | BPR/random,NDCG,20,0.004385
+Family CF | BPR/random,FullCoverage,1,0.000000
+Family CF | BPR/random,FullCoverage,2,0.000000
+Family CF | BPR/random,FullCoverage,3,0.000000
+Family CF | BPR/random,FullCoverage,4,0.000000
+Family CF | BPR/random,FullCoverage,5,0.000000
+Family CF | BPR/random,FullCoverage,6,0.000000
+Family CF | BPR/random,FullCoverage,7,0.000000
+Family CF | BPR/random,FullCoverage,8,0.000000
+Family CF | BPR/random,FullCoverage,9,0.000000
+Family CF | BPR/random,FullCoverage,10,0.000000
+Family CF | BPR/random,FullCoverage,11,0.000000
+Family CF | BPR/random,FullCoverage,12,0.000000
+Family CF | BPR/random,FullCoverage,13,0.000000
+Family CF | BPR/random,FullCoverage,14,0.000000
+Family CF | BPR/random,FullCoverage,15,0.000000
+Family CF | BPR/random,FullCoverage,16,0.000000
+Family CF | BPR/random,FullCoverage,17,0.000242
+Family CF | BPR/random,FullCoverage,18,0.000242
+Family CF | BPR/random,FullCoverage,19,0.000242
+Family CF | BPR/random,FullCoverage,20,0.000242
+Family CF | BPR/semantic,Recall,1,0.000384
+Family CF | BPR/semantic,Recall,2,0.000424
+Family CF | BPR/semantic,Recall,3,0.000596
+Family CF | BPR/semantic,Recall,4,0.000959
+Family CF | BPR/semantic,Recall,5,0.001242
+Family CF | BPR/semantic,Recall,6,0.001798
+Family CF | BPR/semantic,Recall,7,0.002737
+Family CF | BPR/semantic,Recall,8,0.003060
+Family CF | BPR/semantic,Recall,9,0.003525
+Family CF | BPR/semantic,Recall,10,0.003899
+Family CF | BPR/semantic,Recall,11,0.004494
+Family CF | BPR/semantic,Recall,12,0.004828
+Family CF | BPR/semantic,Recall,13,0.005070
+Family CF | BPR/semantic,Recall,14,0.005383
+Family CF | BPR/semantic,Recall,15,0.005545
+Family CF | BPR/semantic,Recall,16,0.005545
+Family CF | BPR/semantic,Recall,17,0.005646
+Family CF | BPR/semantic,Recall,18,0.006252
+Family CF | BPR/semantic,Recall,19,0.006343
+Family CF | BPR/semantic,Recall,20,0.006615
+Family CF | BPR/semantic,NDCG,1,0.000848
+Family CF | BPR/semantic,NDCG,2,0.000567
+Family CF | BPR/semantic,NDCG,3,0.000644
+Family CF | BPR/semantic,NDCG,4,0.000849
+Family CF | BPR/semantic,NDCG,5,0.000995
+Family CF | BPR/semantic,NDCG,6,0.001266
+Family CF | BPR/semantic,NDCG,7,0.001683
+Family CF | BPR/semantic,NDCG,8,0.001812
+Family CF | BPR/semantic,NDCG,9,0.001993
+Family CF | BPR/semantic,NDCG,10,0.002143
+Family CF | BPR/semantic,NDCG,11,0.002365
+Family CF | BPR/semantic,NDCG,12,0.002490
+Family CF | BPR/semantic,NDCG,13,0.002579
+Family CF | BPR/semantic,NDCG,14,0.002682
+Family CF | BPR/semantic,NDCG,15,0.002733
+Family CF | BPR/semantic,NDCG,16,0.002733
+Family CF | BPR/semantic,NDCG,17,0.002765
+Family CF | BPR/semantic,NDCG,18,0.002960
+Family CF | BPR/semantic,NDCG,19,0.002988
+Family CF | BPR/semantic,NDCG,20,0.003076
+Family CF | BPR/semantic,FullCoverage,1,0.000000
+Family CF | BPR/semantic,FullCoverage,2,0.000000
+Family CF | BPR/semantic,FullCoverage,3,0.000000
+Family CF | BPR/semantic,FullCoverage,4,0.000000
+Family CF | BPR/semantic,FullCoverage,5,0.000000
+Family CF | BPR/semantic,FullCoverage,6,0.000000
+Family CF | BPR/semantic,FullCoverage,7,0.000000
+Family CF | BPR/semantic,FullCoverage,8,0.000000
+Family CF | BPR/semantic,FullCoverage,9,0.000000
+Family CF | BPR/semantic,FullCoverage,10,0.000000
+Family CF | BPR/semantic,FullCoverage,11,0.000000
+Family CF | BPR/semantic,FullCoverage,12,0.000000
+Family CF | BPR/semantic,FullCoverage,13,0.000000
+Family CF | BPR/semantic,FullCoverage,14,0.000000
+Family CF | BPR/semantic,FullCoverage,15,0.000000
+Family CF | BPR/semantic,FullCoverage,16,0.000000
+Family CF | BPR/semantic,FullCoverage,17,0.000000
+Family CF | BPR/semantic,FullCoverage,18,0.000000
+Family CF | BPR/semantic,FullCoverage,19,0.000000
+Family CF | BPR/semantic,FullCoverage,20,0.000000
+Projected CF | MSE,Recall,1,0.000576
+Projected CF | MSE,Recall,2,0.001626
+Projected CF | MSE,Recall,3,0.002091
+Projected CF | MSE,Recall,4,0.002474
+Projected CF | MSE,Recall,5,0.003272
+Projected CF | MSE,Recall,6,0.003818
+Projected CF | MSE,Recall,7,0.004474
+Projected CF | MSE,Recall,8,0.005050
+Projected CF | MSE,Recall,9,0.005848
+Projected CF | MSE,Recall,10,0.006474
+Projected CF | MSE,Recall,11,0.006949
+Projected CF | MSE,Recall,12,0.007151
+Projected CF | MSE,Recall,13,0.007403
+Projected CF | MSE,Recall,14,0.007999
+Projected CF | MSE,Recall,15,0.008342
+Projected CF | MSE,Recall,16,0.008807
+Projected CF | MSE,Recall,17,0.009241
+Projected CF | MSE,Recall,18,0.009746
+Projected CF | MSE,Recall,19,0.010150
+Projected CF | MSE,Recall,20,0.010484
+Projected CF | MSE,NDCG,1,0.001454
+Projected CF | MSE,NDCG,2,0.001876
+Projected CF | MSE,NDCG,3,0.001953
+Projected CF | MSE,NDCG,4,0.002161
+Projected CF | MSE,NDCG,5,0.002554
+Projected CF | MSE,NDCG,6,0.002808
+Projected CF | MSE,NDCG,7,0.003092
+Projected CF | MSE,NDCG,8,0.003338
+Projected CF | MSE,NDCG,9,0.003644
+Projected CF | MSE,NDCG,10,0.003882
+Projected CF | MSE,NDCG,11,0.004057
+Projected CF | MSE,NDCG,12,0.004128
+Projected CF | MSE,NDCG,13,0.004220
+Projected CF | MSE,NDCG,14,0.004413
+Projected CF | MSE,NDCG,15,0.004525
+Projected CF | MSE,NDCG,16,0.004677
+Projected CF | MSE,NDCG,17,0.004819
+Projected CF | MSE,NDCG,18,0.004969
+Projected CF | MSE,NDCG,19,0.005090
+Projected CF | MSE,NDCG,20,0.005190
+Projected CF | MSE,FullCoverage,1,0.000000
+Projected CF | MSE,FullCoverage,2,0.000000
+Projected CF | MSE,FullCoverage,3,0.000121
+Projected CF | MSE,FullCoverage,4,0.000121
+Projected CF | MSE,FullCoverage,5,0.000364
+Projected CF | MSE,FullCoverage,6,0.000364
+Projected CF | MSE,FullCoverage,7,0.000364
+Projected CF | MSE,FullCoverage,8,0.000364
+Projected CF | MSE,FullCoverage,9,0.000364
+Projected CF | MSE,FullCoverage,10,0.000364
+Projected CF | MSE,FullCoverage,11,0.000364
+Projected CF | MSE,FullCoverage,12,0.000364
+Projected CF | MSE,FullCoverage,13,0.000364
+Projected CF | MSE,FullCoverage,14,0.000364
+Projected CF | MSE,FullCoverage,15,0.000364
+Projected CF | MSE,FullCoverage,16,0.000606
+Projected CF | MSE,FullCoverage,17,0.000606
+Projected CF | MSE,FullCoverage,18,0.000606
+Projected CF | MSE,FullCoverage,19,0.000606
+Projected CF | MSE,FullCoverage,20,0.000606
+Projected CF | BPR/random,Recall,1,0.002394
+Projected CF | BPR/random,Recall,2,0.003828
+Projected CF | BPR/random,Recall,3,0.005575
+Projected CF | BPR/random,Recall,4,0.006666
+Projected CF | BPR/random,Recall,5,0.008039
+Projected CF | BPR/random,Recall,6,0.009060
+Projected CF | BPR/random,Recall,7,0.010231
+Projected CF | BPR/random,Recall,8,0.011281
+Projected CF | BPR/random,Recall,9,0.011908
+Projected CF | BPR/random,Recall,10,0.012968
+Projected CF | BPR/random,Recall,11,0.013716
+Projected CF | BPR/random,Recall,12,0.014422
+Projected CF | BPR/random,Recall,13,0.015443
+Projected CF | BPR/random,Recall,14,0.016402
+Projected CF | BPR/random,Recall,15,0.017483
+Projected CF | BPR/random,Recall,16,0.018109
+Projected CF | BPR/random,Recall,17,0.018897
+Projected CF | BPR/random,Recall,18,0.019674
+Projected CF | BPR/random,Recall,19,0.020290
+Projected CF | BPR/random,Recall,20,0.020826
+Projected CF | BPR/random,NDCG,1,0.005939
+Projected CF | BPR/random,NDCG,2,0.005095
+Projected CF | BPR/random,NDCG,3,0.005639
+Projected CF | BPR/random,NDCG,4,0.006106
+Projected CF | BPR/random,NDCG,5,0.006786
+Projected CF | BPR/random,NDCG,6,0.007271
+Projected CF | BPR/random,NDCG,7,0.007783
+Projected CF | BPR/random,NDCG,8,0.008233
+Projected CF | BPR/random,NDCG,9,0.008481
+Projected CF | BPR/random,NDCG,10,0.008891
+Projected CF | BPR/random,NDCG,11,0.009174
+Projected CF | BPR/random,NDCG,12,0.009422
+Projected CF | BPR/random,NDCG,13,0.009768
+Projected CF | BPR/random,NDCG,14,0.010087
+Projected CF | BPR/random,NDCG,15,0.010436
+Projected CF | BPR/random,NDCG,16,0.010638
+Projected CF | BPR/random,NDCG,17,0.010880
+Projected CF | BPR/random,NDCG,18,0.011115
+Projected CF | BPR/random,NDCG,19,0.011304
+Projected CF | BPR/random,NDCG,20,0.011464
+Projected CF | BPR/random,FullCoverage,1,0.000000
+Projected CF | BPR/random,FullCoverage,2,0.000121
+Projected CF | BPR/random,FullCoverage,3,0.000242
+Projected CF | BPR/random,FullCoverage,4,0.000485
+Projected CF | BPR/random,FullCoverage,5,0.000485
+Projected CF | BPR/random,FullCoverage,6,0.000485
+Projected CF | BPR/random,FullCoverage,7,0.000606
+Projected CF | BPR/random,FullCoverage,8,0.000606
+Projected CF | BPR/random,FullCoverage,9,0.000606
+Projected CF | BPR/random,FullCoverage,10,0.000727
+Projected CF | BPR/random,FullCoverage,11,0.000727
+Projected CF | BPR/random,FullCoverage,12,0.000970
+Projected CF | BPR/random,FullCoverage,13,0.001091
+Projected CF | BPR/random,FullCoverage,14,0.001091
+Projected CF | BPR/random,FullCoverage,15,0.001212
+Projected CF | BPR/random,FullCoverage,16,0.001212
+Projected CF | BPR/random,FullCoverage,17,0.001212
+Projected CF | BPR/random,FullCoverage,18,0.001212
+Projected CF | BPR/random,FullCoverage,19,0.001212
+Projected CF | BPR/random,FullCoverage,20,0.001454
+Projected CF | BPR/semantic,Recall,1,0.001848
+Projected CF | BPR/semantic,Recall,2,0.002575
+Projected CF | BPR/semantic,Recall,3,0.003717
+Projected CF | BPR/semantic,Recall,4,0.004262
+Projected CF | BPR/semantic,Recall,5,0.004818
+Projected CF | BPR/semantic,Recall,6,0.005555
+Projected CF | BPR/semantic,Recall,7,0.006131
+Projected CF | BPR/semantic,Recall,8,0.006817
+Projected CF | BPR/semantic,Recall,9,0.007292
+Projected CF | BPR/semantic,Recall,10,0.007706
+Projected CF | BPR/semantic,Recall,11,0.008282
+Projected CF | BPR/semantic,Recall,12,0.008716
+Projected CF | BPR/semantic,Recall,13,0.009453
+Projected CF | BPR/semantic,Recall,14,0.010312
+Projected CF | BPR/semantic,Recall,15,0.011120
+Projected CF | BPR/semantic,Recall,16,0.011625
+Projected CF | BPR/semantic,Recall,17,0.012089
+Projected CF | BPR/semantic,Recall,18,0.012534
+Projected CF | BPR/semantic,Recall,19,0.012847
+Projected CF | BPR/semantic,Recall,20,0.013332
+Projected CF | BPR/semantic,NDCG,1,0.004606
+Projected CF | BPR/semantic,NDCG,2,0.003527
+Projected CF | BPR/semantic,NDCG,3,0.003812
+Projected CF | BPR/semantic,NDCG,4,0.004064
+Projected CF | BPR/semantic,NDCG,5,0.004358
+Projected CF | BPR/semantic,NDCG,6,0.004717
+Projected CF | BPR/semantic,NDCG,7,0.004963
+Projected CF | BPR/semantic,NDCG,8,0.005247
+Projected CF | BPR/semantic,NDCG,9,0.005429
+Projected CF | BPR/semantic,NDCG,10,0.005583
+Projected CF | BPR/semantic,NDCG,11,0.005807
+Projected CF | BPR/semantic,NDCG,12,0.005967
+Projected CF | BPR/semantic,NDCG,13,0.006214
+Projected CF | BPR/semantic,NDCG,14,0.006504
+Projected CF | BPR/semantic,NDCG,15,0.006772
+Projected CF | BPR/semantic,NDCG,16,0.006927
+Projected CF | BPR/semantic,NDCG,17,0.007085
+Projected CF | BPR/semantic,NDCG,18,0.007222
+Projected CF | BPR/semantic,NDCG,19,0.007315
+Projected CF | BPR/semantic,NDCG,20,0.007460
+Projected CF | BPR/semantic,FullCoverage,1,0.000000
+Projected CF | BPR/semantic,FullCoverage,2,0.000000
+Projected CF | BPR/semantic,FullCoverage,3,0.000242
+Projected CF | BPR/semantic,FullCoverage,4,0.000242
+Projected CF | BPR/semantic,FullCoverage,5,0.000242
+Projected CF | BPR/semantic,FullCoverage,6,0.000364
+Projected CF | BPR/semantic,FullCoverage,7,0.000364
+Projected CF | BPR/semantic,FullCoverage,8,0.000364
+Projected CF | BPR/semantic,FullCoverage,9,0.000485
+Projected CF | BPR/semantic,FullCoverage,10,0.000485
+Projected CF | BPR/semantic,FullCoverage,11,0.000485
+Projected CF | BPR/semantic,FullCoverage,12,0.000485
+Projected CF | BPR/semantic,FullCoverage,13,0.000485
+Projected CF | BPR/semantic,FullCoverage,14,0.000606
+Projected CF | BPR/semantic,FullCoverage,15,0.000606
+Projected CF | BPR/semantic,FullCoverage,16,0.000606
+Projected CF | BPR/semantic,FullCoverage,17,0.000606
+Projected CF | BPR/semantic,FullCoverage,18,0.000727
+Projected CF | BPR/semantic,FullCoverage,19,0.000848
+Projected CF | BPR/semantic,FullCoverage,20,0.000848
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,Recall,1,0.000990
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,Recall,2,0.002060
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,Recall,3,0.003666
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,Recall,4,0.004515
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,Recall,5,0.005918
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,Recall,6,0.006686
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,Recall,7,0.007242
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,Recall,8,0.007949
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,Recall,9,0.008363
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,Recall,10,0.009009
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,Recall,11,0.009676
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,Recall,12,0.010261
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,Recall,13,0.010827
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,Recall,14,0.011605
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,Recall,15,0.011847
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,Recall,16,0.012605
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,Recall,17,0.012958
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,Recall,18,0.014029
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,Recall,19,0.014069
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,Recall,20,0.014503
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,NDCG,1,0.002666
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,NDCG,2,0.002619
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,NDCG,3,0.003335
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,NDCG,4,0.003718
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,NDCG,5,0.004415
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,NDCG,6,0.004776
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,NDCG,7,0.005029
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,NDCG,8,0.005312
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,NDCG,9,0.005485
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,NDCG,10,0.005735
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,NDCG,11,0.005980
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,NDCG,12,0.006182
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,NDCG,13,0.006379
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,NDCG,14,0.006635
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,NDCG,15,0.006715
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,NDCG,16,0.006961
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,NDCG,17,0.007076
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,NDCG,18,0.007397
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,NDCG,19,0.007410
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,NDCG,20,0.007540
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,FullCoverage,1,0.000000
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,FullCoverage,2,0.000000
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,FullCoverage,3,0.000121
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,FullCoverage,4,0.000242
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,FullCoverage,5,0.000364
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,FullCoverage,6,0.000485
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,FullCoverage,7,0.000485
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,FullCoverage,8,0.000485
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,FullCoverage,9,0.000606
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,FullCoverage,10,0.000606
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,FullCoverage,11,0.000727
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,FullCoverage,12,0.000727
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,FullCoverage,13,0.000727
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,FullCoverage,14,0.001091
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,FullCoverage,15,0.001091
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,FullCoverage,16,0.001091
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,FullCoverage,17,0.001091
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,FullCoverage,18,0.001091
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,FullCoverage,19,0.001091
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,FullCoverage,20,0.001091
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10,Recall,1,0.001151
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10,Recall,2,0.002575
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10,Recall,3,0.003575
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10,Recall,4,0.004888
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10,Recall,5,0.006292
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10,Recall,6,0.007363
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10,Recall,7,0.007999
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10,Recall,8,0.008292
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10,Recall,9,0.008656
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10,Recall,10,0.009363
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10,Recall,11,0.010029
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10,Recall,12,0.010645
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10,Recall,13,0.011312
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10,Recall,14,0.011898
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10,Recall,15,0.012392
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10,Recall,16,0.012796
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10,Recall,17,0.013433
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10,Recall,18,0.014019
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10,Recall,19,0.014332
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10,Recall,20,0.014816
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10,NDCG,1,0.003151
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10,NDCG,2,0.003245
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10,NDCG,3,0.003475
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10,NDCG,4,0.004108
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10,NDCG,5,0.004807
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10,NDCG,6,0.005314
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10,NDCG,7,0.005578
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10,NDCG,8,0.005699
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10,NDCG,9,0.005846
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10,NDCG,10,0.006123
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10,NDCG,11,0.006363
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10,NDCG,12,0.006583
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10,NDCG,13,0.006809
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10,NDCG,14,0.007011
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10,NDCG,15,0.007172
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10,NDCG,16,0.007306
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10,NDCG,17,0.007505
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10,NDCG,18,0.007681
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10,NDCG,19,0.007774
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10,NDCG,20,0.007920
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10,FullCoverage,1,0.000000
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10,FullCoverage,2,0.000000
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10,FullCoverage,3,0.000121
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10,FullCoverage,4,0.000364
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10,FullCoverage,5,0.000485
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10,FullCoverage,6,0.000485
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10,FullCoverage,7,0.000485
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10,FullCoverage,8,0.000485
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10,FullCoverage,9,0.000485
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10,FullCoverage,10,0.000485
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10,FullCoverage,11,0.000485
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10,FullCoverage,12,0.000606
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10,FullCoverage,13,0.000727
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10,FullCoverage,14,0.000848
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10,FullCoverage,15,0.000848
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10,FullCoverage,16,0.000848
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10,FullCoverage,17,0.000848
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10,FullCoverage,18,0.000970
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10,FullCoverage,19,0.001091
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10,FullCoverage,20,0.001212
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5,Recall,1,0.001091
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5,Recall,2,0.002515
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5,Recall,3,0.003454
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5,Recall,4,0.004434
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5,Recall,5,0.005949
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5,Recall,6,0.006858
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5,Recall,7,0.007332
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5,Recall,8,0.007848
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5,Recall,9,0.008161
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5,Recall,10,0.008989
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5,Recall,11,0.009534
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5,Recall,12,0.010059
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5,Recall,13,0.010958
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5,Recall,14,0.011524
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5,Recall,15,0.012120
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5,Recall,16,0.012786
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5,Recall,17,0.013251
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5,Recall,18,0.013988
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5,Recall,19,0.014321
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5,Recall,20,0.014685
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5,NDCG,1,0.002909
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5,NDCG,2,0.003096
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5,NDCG,3,0.003321
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5,NDCG,4,0.003784
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5,NDCG,5,0.004536
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5,NDCG,6,0.004964
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5,NDCG,7,0.005166
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5,NDCG,8,0.005381
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5,NDCG,9,0.005509
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5,NDCG,10,0.005829
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5,NDCG,11,0.006033
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5,NDCG,12,0.006220
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5,NDCG,13,0.006528
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5,NDCG,14,0.006714
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5,NDCG,15,0.006903
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5,NDCG,16,0.007120
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5,NDCG,17,0.007268
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5,NDCG,18,0.007490
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5,NDCG,19,0.007592
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5,NDCG,20,0.007703
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5,FullCoverage,1,0.000000
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5,FullCoverage,2,0.000000
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5,FullCoverage,3,0.000242
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5,FullCoverage,4,0.000242
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5,FullCoverage,5,0.000485
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5,FullCoverage,6,0.000485
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5,FullCoverage,7,0.000485
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5,FullCoverage,8,0.000485
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5,FullCoverage,9,0.000485
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5,FullCoverage,10,0.000485
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5,FullCoverage,11,0.000485
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5,FullCoverage,12,0.000485
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5,FullCoverage,13,0.000485
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5,FullCoverage,14,0.000848
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5,FullCoverage,15,0.000848
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5,FullCoverage,16,0.000848
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5,FullCoverage,17,0.000848
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5,FullCoverage,18,0.000848
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5,FullCoverage,19,0.000848
+Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5,FullCoverage,20,0.000848

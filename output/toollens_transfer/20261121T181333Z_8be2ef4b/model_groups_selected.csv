@@ -1,0 +1,4 @@
+method,model,selection_split,criterion
+Query-KNN CF,Query-KNN CF | BPR/random,ToolLens test (описательное сравнение),"FullCoverage@10, Recall@10, NDCG@10, model"
+Projected CF,Projected CF | BPR/random,ToolLens test (описательное сравнение),"FullCoverage@10, Recall@10, NDCG@10, model"
+Family CF,Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3,ToolLens val,"FullCoverage@10, Recall@10, NDCG@10, model"

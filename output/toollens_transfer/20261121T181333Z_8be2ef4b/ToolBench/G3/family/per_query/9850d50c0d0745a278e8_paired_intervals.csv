@@ -1,0 +1,13 @@
+model,reference,metric,k,queries,difference,standard_error,low,high,method
+Family CF | MiniBatchKMeans-128 | log1p | BPR/random | n=1,Family CF | MiniBatchKMeans-32 | binary | MSE | n=1,Recall,3,2375,-0.000912280701754386,0.0009545065447044396,-0.0027830791523828584,0.0009585177488740866,paired_query_mean_normal_95
+Family CF | MiniBatchKMeans-128 | log1p | BPR/random | n=1,Family CF | MiniBatchKMeans-32 | binary | MSE | n=1,Recall,5,2375,-0.002771929824561403,0.0014022119668489058,-0.00552021477827633,-2.364487084647541e-05,paired_query_mean_normal_95
+Family CF | MiniBatchKMeans-128 | log1p | BPR/random | n=1,Family CF | MiniBatchKMeans-32 | binary | MSE | n=1,Recall,10,2375,-0.0027368421052631573,0.001527116502532034,-0.005729935450422714,0.0002562512398963995,paired_query_mean_normal_95
+Family CF | MiniBatchKMeans-128 | log1p | BPR/random | n=1,Family CF | MiniBatchKMeans-32 | binary | MSE | n=1,Recall,20,2375,0.005052631578947368,0.001960704713346021,0.001209720956471236,0.008895542201423499,paired_query_mean_normal_95
+Family CF | MiniBatchKMeans-128 | log1p | BPR/random | n=1,Family CF | MiniBatchKMeans-32 | binary | MSE | n=1,NDCG,3,2375,-0.0001279106294975245,0.0009895745016395361,-0.002067441012730188,0.001811619753735139,paired_query_mean_normal_95
+Family CF | MiniBatchKMeans-128 | log1p | BPR/random | n=1,Family CF | MiniBatchKMeans-32 | binary | MSE | n=1,NDCG,5,2375,-0.0012188924536797284,0.0010717471282619387,-0.003319478225607358,0.0008816933182479014,paired_query_mean_normal_95
+Family CF | MiniBatchKMeans-128 | log1p | BPR/random | n=1,Family CF | MiniBatchKMeans-32 | binary | MSE | n=1,NDCG,10,2375,-0.0011650597941693635,0.0009883277721302864,-0.0031021466324654343,0.0007720270441267071,paired_query_mean_normal_95
+Family CF | MiniBatchKMeans-128 | log1p | BPR/random | n=1,Family CF | MiniBatchKMeans-32 | binary | MSE | n=1,NDCG,20,2375,0.0014363224037944279,0.0009989709713481832,-0.0005216247216490054,0.003394269529237861,paired_query_mean_normal_95
+Family CF | MiniBatchKMeans-128 | log1p | BPR/random | n=1,Family CF | MiniBatchKMeans-32 | binary | MSE | n=1,FullCoverage,3,2375,0.0,0.0,0.0,0.0,paired_query_mean_normal_95
+Family CF | MiniBatchKMeans-128 | log1p | BPR/random | n=1,Family CF | MiniBatchKMeans-32 | binary | MSE | n=1,FullCoverage,5,2375,0.0,0.0,0.0,0.0,paired_query_mean_normal_95
+Family CF | MiniBatchKMeans-128 | log1p | BPR/random | n=1,Family CF | MiniBatchKMeans-32 | binary | MSE | n=1,FullCoverage,10,2375,0.0,0.0,0.0,0.0,paired_query_mean_normal_95
+Family CF | MiniBatchKMeans-128 | log1p | BPR/random | n=1,Family CF | MiniBatchKMeans-32 | binary | MSE | n=1,FullCoverage,20,2375,0.0,0.0,0.0,0.0,paired_query_mean_normal_95
