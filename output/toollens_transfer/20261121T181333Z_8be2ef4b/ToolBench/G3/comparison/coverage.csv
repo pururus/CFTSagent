@@ -1,0 +1,2 @@
+queries,evaluated_queries,excluded_no_positive,catalogue_size,known_candidates,in_catalogue_macro,in_catalogue_micro,in_train_history_macro,in_train_history_micro
+2375,2375,0,1419,50,1.0,1.0,0.04470175438596491,0.044271239282930634

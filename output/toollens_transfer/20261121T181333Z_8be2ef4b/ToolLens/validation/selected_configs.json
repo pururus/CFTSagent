@@ -1,0 +1,83 @@
+{
+  "Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3": {
+    "config": {
+      "factors": 16,
+      "epochs": 5,
+      "regularization": 0.1,
+      "positive_weight": 1.0,
+      "n_neighbors": 3,
+      "neighbor_weighting": "cosine",
+      "seed": 67,
+      "device": "mps",
+      "encoder_device": "mps",
+      "learning_rate": 0.01,
+      "batch_size": 128,
+      "query_instruction": "Represent this sentence for searching relevant passages: ",
+      "max_length": 512,
+      "encoder_batch_size": 32,
+      "negatives_per_positive": 1,
+      "hard_pool_size": 20,
+      "clustering": "minibatch_kmeans",
+      "n_families": 128,
+      "aggregation": "frequency",
+      "count_transform": "count",
+      "loss": "bpr",
+      "negative_sampling": "random"
+    },
+    "factory": "FamilyQueryKNNCFRanker"
+  },
+  "Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10": {
+    "config": {
+      "factors": 16,
+      "epochs": 5,
+      "regularization": 0.1,
+      "positive_weight": 1.0,
+      "n_neighbors": 10,
+      "neighbor_weighting": "cosine",
+      "seed": 67,
+      "device": "mps",
+      "encoder_device": "mps",
+      "learning_rate": 0.01,
+      "batch_size": 128,
+      "query_instruction": "Represent this sentence for searching relevant passages: ",
+      "max_length": 512,
+      "encoder_batch_size": 32,
+      "negatives_per_positive": 1,
+      "hard_pool_size": 20,
+      "clustering": "minibatch_kmeans",
+      "n_families": 128,
+      "aggregation": "frequency",
+      "count_transform": "count",
+      "loss": "bpr",
+      "negative_sampling": "random"
+    },
+    "factory": "FamilyQueryKNNCFRanker"
+  },
+  "Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5": {
+    "config": {
+      "factors": 16,
+      "epochs": 5,
+      "regularization": 0.1,
+      "positive_weight": 1.0,
+      "n_neighbors": 5,
+      "neighbor_weighting": "cosine",
+      "seed": 67,
+      "device": "mps",
+      "encoder_device": "mps",
+      "learning_rate": 0.01,
+      "batch_size": 128,
+      "query_instruction": "Represent this sentence for searching relevant passages: ",
+      "max_length": 512,
+      "encoder_batch_size": 32,
+      "negatives_per_positive": 1,
+      "hard_pool_size": 20,
+      "clustering": "minibatch_kmeans",
+      "n_families": 128,
+      "aggregation": "frequency",
+      "count_transform": "count",
+      "loss": "bpr",
+      "negative_sampling": "random"
+    },
+    "factory": "FamilyQueryKNNCFRanker"
+  }
+}

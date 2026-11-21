@@ -1,6 +1,7 @@
 """Оптимизация факторов CF и выбор негативов только из train API."""
 
 import numpy as np
+from typing import Callable
 from numpy.typing import NDArray
 from scipy import sparse
 
@@ -18,7 +19,8 @@ def mse_objective(targets, rows, items, regularization, positive_weight):
     return float((max(0.0, squared) + penalty) / np.prod(targets.shape))
 
 
-def fit_als(targets, factors, epochs, regularization, positive_weight, seed):
+def fit_als(targets, factors, epochs, regularization, positive_weight, seed,
+            progress_callback: Callable[[int, float], None] | None = None):
     """ALS для взвешенной квадратичной ошибки по всей train-матрице."""
     rng = np.random.default_rng(seed)
     items = rng.normal(0, 0.1, (targets.shape[1], factors))
@@ -42,6 +44,8 @@ def fit_als(targets, factors, epochs, regularization, positive_weight, seed):
         rows = update(targets, items)
         items = update(transposed, rows)
         history.append(mse_objective(targets, rows, items, regularization, positive_weight))
+        if progress_callback is not None:
+            progress_callback(len(history), history[-1])
     return rows.astype(np.float32), items.astype(np.float32), history
 
 
@@ -91,7 +95,8 @@ class NegativeSampler:
 def fit_gradient(targets, row_embeddings, api_embeddings, *, projected,
                  loss, sampling, factors, epochs, regularization,
                  positive_weight, learning_rate, batch_size, negatives_per_positive,
-                 hard_pool_size, seed, device):
+                 hard_pool_size, seed, device,
+                 progress_callback: Callable[[int, float], None] | None = None):
     """Adam для BPR и для проекционного MSE, вычисляемого батчами."""
     import torch
     from torch.nn import functional as functional
@@ -148,4 +153,6 @@ def fit_gradient(targets, row_embeddings, api_embeddings, *, projected,
             total_loss += float(objective.detach().cpu()) * len(batch)
             total_examples += len(batch)
         history.append(total_loss / total_examples)
+        if progress_callback is not None:
+            progress_callback(len(history), history[-1])
     return left.detach().cpu().numpy(), items.detach().cpu().numpy(), history

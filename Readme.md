@@ -20,5 +20,48 @@
 - Звездин Илья @MrZVIL
 - Туревич Артем @tiom4eg
 
+## Структура проекта
+
+- [`rankers/`](rankers/) содержит общий интерфейс ранжировщиков, бейзлайны Popularity, BM25 и BGE, а также модели коллаборативной фильтрации и код для их обучения.
+- [`data/ToolLens/`](data/ToolLens/) содержит исходные файлы в `raw/`, ноутбук предобработки `process_data.ipynb` и подготовленные таблицы Parquet в `processed/`.
+- `data/ToolBench/` в ветке `main` содержит ноутбук предобработки `process_data.ipynb` и подготовленные данные для групп G1, G2 и G3 в `processed/`. В каждой группе есть таблицы соответствия исходных и внутренних идентификаторов в `id_maps/`.
+- В `processed/` каждого датасета (`processed/G1/`, `processed/G2/` и `processed/G3/` для ToolBench) хранятся `apis.parquet` с каталогом API, `requests.parquet` с запросами и `interactions.parquet` со связями между запросами и API. Схема таблиц описана в [DATA_FORMAT.md](DATA_FORMAT.md).
+- [`experiments/`](experiments/) содержит объединённый ноутбук и вспомогательные модули для загрузки данных, обучения, оценки и экспорта результатов.
+- [`pdf/`](pdf/) содержит описание проекта и слайды презентации.
+
+## Воспроизведение экспериментов
+
+### Установка зависимостей
+
+```bash
+python3.12 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+```
+
+### Данные и энкодер
+
+- **ToolLens.** Готовые таблицы находятся в `data/ToolLens/processed/`. Исходные файлы включены в репозиторий в `data/ToolLens/raw/`. При необходимости таблицы можно пересобрать, запустив [ноутбук предобработки](data/ToolLens/process_data.ipynb) с рабочей директорией `data/ToolLens/`.
+- **ToolBench.** Готовые таблицы G1, G2 и G3 находятся в `data/ToolBench/processed/` в ветке `main`. Если их нет в рабочей папке, экспериментальный ноутбук прочитает их из локальной ветки `main`. Если такой ветки нет, выполните `git fetch origin main:main`.
+- **BGE.** Ноутбук читает локальные файлы энкодера из `models/bge-small-en-v1.5/`. Если каталог ещё не подготовлен, скачайте файлы фиксированной ревизии. [BAAI/bge-small-en-v1.5 на Hugging Face](https://huggingface.co/BAAI/bge-small-en-v1.5/tree/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a)
+
+```bash
+hf download BAAI/bge-small-en-v1.5 \
+  --revision 5c38ec7c405ec4b44b94cc5a9bb96e735b38267a \
+  --include '*.json' 'model.safetensors' 'vocab.txt' \
+  --local-dir models/bge-small-en-v1.5
+```
+
+### Запуск эксперимента
+
+Из активированного окружения откройте [ноутбук](experiments/toollens_toolbench.ipynb).
+
+Все эксперименты проводятся запуском всех ячеек сверху вниз. Первая ячейка выводит путь к новой папке запуска в `output/toollens_transfer/`. Результаты ToolLens test и каждой группы ToolBench содержат папку `comparison/` с графиком `metrics.png`, сводной таблицей `metrics.csv` и LaTeX-таблицами для Recall, NDCG и FullCoverage при K = 3, 5, 10 и 20. Результаты поиска по всей сетке Family CF лежат в `ToolLens/validation/`, а результаты её тестирования — в папках `family/` каждого тестового набора.
+
 ## План работы
 
+### TODO
+
+- [ ] Подбор гиперпараметров
+- [ ] Дообучение энкодеров
+- [ ] Промпт инжиниринг

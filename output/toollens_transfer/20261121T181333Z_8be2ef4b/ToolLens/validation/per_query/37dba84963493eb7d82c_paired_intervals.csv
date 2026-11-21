@@ -1,0 +1,13 @@
+model,reference,metric,k,queries,difference,standard_error,low,high,method
+Family CF | DBSCAN | sqrt | BPR/semantic | n=1,Family CF | MiniBatchKMeans-32 | binary | MSE | n=1,Recall,3,1877,0.10575386254661694,0.00830970638370827,0.08946713731244615,0.12204058778078772,paired_query_mean_normal_95
+Family CF | DBSCAN | sqrt | BPR/semantic | n=1,Family CF | MiniBatchKMeans-32 | binary | MSE | n=1,Recall,5,1877,0.06899307405434203,0.009686176409648608,0.050008517143529274,0.08797763096515479,paired_query_mean_normal_95
+Family CF | DBSCAN | sqrt | BPR/semantic | n=1,Family CF | MiniBatchKMeans-32 | binary | MSE | n=1,Recall,10,1877,0.04626176522820104,0.01111053489238202,0.02448551699015667,0.06803801346624541,paired_query_mean_normal_95
+Family CF | DBSCAN | sqrt | BPR/semantic | n=1,Family CF | MiniBatchKMeans-32 | binary | MSE | n=1,Recall,20,1877,-0.03507369916533475,0.012054342850741227,-0.05869977701008544,-0.011447621320584064,paired_query_mean_normal_95
+Family CF | DBSCAN | sqrt | BPR/semantic | n=1,Family CF | MiniBatchKMeans-32 | binary | MSE | n=1,NDCG,3,1877,0.11335848108396751,0.008932348951360615,0.09585139884195659,0.13086556332597843,paired_query_mean_normal_95
+Family CF | DBSCAN | sqrt | BPR/semantic | n=1,Family CF | MiniBatchKMeans-32 | binary | MSE | n=1,NDCG,5,1877,0.09167270570052143,0.009477493644149874,0.0730971594942804,0.11024825190676245,paired_query_mean_normal_95
+Family CF | DBSCAN | sqrt | BPR/semantic | n=1,Family CF | MiniBatchKMeans-32 | binary | MSE | n=1,NDCG,10,1877,0.08164335621570586,0.009850643586423655,0.06233644956177502,0.1009502628696367,paired_query_mean_normal_95
+Family CF | DBSCAN | sqrt | BPR/semantic | n=1,Family CF | MiniBatchKMeans-32 | binary | MSE | n=1,NDCG,20,1877,0.05282203818684184,0.00980412379480386,0.03360630864905412,0.07203776772462957,paired_query_mean_normal_95
+Family CF | DBSCAN | sqrt | BPR/semantic | n=1,Family CF | MiniBatchKMeans-32 | binary | MSE | n=1,FullCoverage,3,1877,0.049547149706979224,0.005339508088385153,0.039081906158584014,0.060012393255374434,paired_query_mean_normal_95
+Family CF | DBSCAN | sqrt | BPR/semantic | n=1,Family CF | MiniBatchKMeans-32 | binary | MSE | n=1,FullCoverage,5,1877,0.06446457112413426,0.00637709126668358,0.051965701915309526,0.07696344033295899,paired_query_mean_normal_95
+Family CF | DBSCAN | sqrt | BPR/semantic | n=1,Family CF | MiniBatchKMeans-32 | binary | MSE | n=1,FullCoverage,10,1877,0.09057005860415557,0.008402426223569627,0.0741016058232042,0.10703851138510694,paired_query_mean_normal_95
+Family CF | DBSCAN | sqrt | BPR/semantic | n=1,Family CF | MiniBatchKMeans-32 | binary | MSE | n=1,FullCoverage,20,1877,0.06499733617474694,0.011204619893809949,0.043036684722418436,0.08695798762707545,paired_query_mean_normal_95

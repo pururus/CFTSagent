@@ -1,0 +1,16 @@
+Method,Configuration
+M01,Popularity
+M02,BM25
+M03,BGE
+M04,Query-KNN CF | MSE
+M05,Query-KNN CF | BPR/random
+M06,Query-KNN CF | BPR/semantic
+M07,Family CF | MSE
+M08,Family CF | BPR/random
+M09,Family CF | BPR/semantic
+M10,Projected CF | MSE
+M11,Projected CF | BPR/random
+M12,Projected CF | BPR/semantic
+M13,Family CF | MiniBatchKMeans-128 | count | BPR/random | n=3
+M14,Family CF | MiniBatchKMeans-128 | count | BPR/random | n=10
+M15,Family CF | MiniBatchKMeans-128 | count | BPR/random | n=5
